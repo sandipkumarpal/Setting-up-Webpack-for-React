@@ -11,12 +11,15 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loaders: ['react-hot', 'babel-loader']
             },
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
             }
         ]
+    },
+    devServer: {
+        hot: true,
     }
 }
